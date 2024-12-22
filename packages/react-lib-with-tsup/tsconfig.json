@@ -1,0 +1,9 @@
+{
+  "extends": "@repo/typescript/tsconfig.browser.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true,
+    "sourceMap": true
+  }
+}
