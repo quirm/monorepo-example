@@ -15,4 +15,10 @@ Local package installation via pnpm has some convenient steps that automatically
 
 ## Troubleshooting
 
+### dts
+
 When `composite` is set in `tsconfig.json`, it will fail to include any other non-entry files. It's important for a monorepo though. A workaround is to handle dts differently in `tsup.config.js` as suggested at https://github.com/egoist/tsup/issues/571.
+
+### watch with outDir
+
+When out-of-package path is defined in `outDir`, e.g. `outDir: path.resolve(__dirname, '../../apps/walle-server/static/walle'),`, it will fail to watch for changes. Unclear how to fix it.

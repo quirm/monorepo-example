@@ -47,11 +47,13 @@ To test how a production build looks like, do the following:
 # install once as usual
 pnpm install
 
-# run cross-workspace dev script alias
-pnpm dev
+# run cross-workspace build script alias
+pnpm build
 ```
 
 This will build all local package dependencies first and then the end packages such as `apps/web` and `apps/web-js`. To see a production output for one of them, you can run `pnpm --filter @repo/web run preview`.
+
+Now, you can manually run desired "app", e.g. `pnpm --filter @repo/web run preview` or in case of a CI, it would pick up configured packages and deploy them.
 
 ## Cheat Sheet
 
